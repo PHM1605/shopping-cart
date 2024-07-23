@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Container, Dropdown, Form, Nav, Navbar } from 'react-bootstrap';
+import { Badge, Button, Container, Dropdown, Form, Nav, Navbar } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { CartState } from '../context/Context';
@@ -51,6 +51,11 @@ const Header = () => {
                         </AiFillDelete>
                       </span>
                     ))}
+                    <Link to="/cart">
+                      <Button style={{ width: "95%", margin: "0 10px" }}>
+                        Go To Cart
+                      </Button>
+                    </Link>
                   </>
                 ) : (
                   <span style={{padding: 10}}>Cart is Empty!</span>
